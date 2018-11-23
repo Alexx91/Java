@@ -2,7 +2,8 @@ import stanford.karel.Karel;
 
 public class ReparaTot extends Karel {
     public void run() {
-        for (int i = 0; i < 10; i++) {
+        int i = 0;
+        while (true) {
             turnLeft();
             while (frontIsClear()) {
                 if (noBeepersPresent()) {

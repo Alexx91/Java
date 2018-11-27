@@ -1,18 +1,18 @@
 package oop.heroes;
 
-public class Thief extends Hero{
+public class Thief extends Hero {
 
     public Thief(Integer life, Integer energy) {
         super(life, energy);
     }
 
     @Override
-    public void takedamage() {
+    void doTakeDamage() {
         life -= 2;
     }
 
     @Override
-    public void attack() {
+    void doAttack() {
         life += 1;
         energy--;
     }
@@ -22,3 +22,4 @@ public class Thief extends Hero{
 
     }
 }
+

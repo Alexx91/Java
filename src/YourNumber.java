@@ -38,11 +38,19 @@ public class YourNumber {
                 }
                 i++;
             }
-            System.out.println("Mai incercam odata? Y/N");
-            Scanner answer = new Scanner(System.in);
-            again = answer.nextLine();
-            i = 0;
-        } while (again.equalsIgnoreCase("y"));
-        System.out.println("Pe data viitoare!");
+            do {
+                System.out.println("Mai incercam odata? Y/N");
+                Scanner answer = new Scanner(System.in);
+                again = answer.next();
+            } while (!(again.equalsIgnoreCase("n") || again.equalsIgnoreCase("y")));
+            if (again.equalsIgnoreCase("n")) {
+
+                System.out.println("Pe data viitoare!");
+                return;
+            }
+                i = 0;
+            }
+            while (again.equalsIgnoreCase("y")) ;
+
+        }
     }
-}

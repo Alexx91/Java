@@ -6,15 +6,16 @@ public class Warlock extends Hero {
     }
 
     @Override
-    public void takedamage() {
+    void doTakeDamage() {
         life -= 2;
     }
 
     @Override
-    public void attack() {
+    void doAttack() {
         energy--;
         life--;
     }
+
 
     @Override
     public void heal() {

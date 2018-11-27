@@ -15,16 +15,16 @@ public class Battle {
 
         System.out.println("Round 1");
 
-        paladin.attack();
-        wizard.takedamage();
+        paladin.doAttack();
+        wizard.doTakeDamage();
 
         System.out.println("paladin " + paladin);
         System.out.println("wizard " + wizard);
 
         System.out.println("Round 2");
 
-        wizard.attack();
-        paladin.takedamage();
+        wizard.doAttack();
+        paladin.doTakeDamage();
 
 
         System.out.println("paladin " + paladin);
@@ -32,8 +32,8 @@ public class Battle {
 
         System.out.println("Round 3");
 
-        paladin.attack();
-        wizard.takedamage();
+        paladin.doAttack();
+        wizard.doTakeDamage();
 
 
         System.out.println("paladin " + paladin);

@@ -5,19 +5,47 @@ public class Battle {
 
         Warrior paladin = new Warrior(10, 6);
         Mage wizard = new Mage(7, 13);
-        battle(paladin, wizard);
+        Thief thug = new Thief(8, 11);
+        Warlock warlock = new Warlock(12, 12);
+        battle(paladin, wizard, thug, warlock);
 
     }
 
-    public static void battle(Hero aHero, Hero anotherHero) {
-        aHero.attack();
-        anotherHero.takedamage();
+    public static void battle(Hero paladin, Hero wizard, Hero thug, Hero warlock) {
 
-        System.out.println(aHero);
-        System.out.println(anotherHero);
+        System.out.println("Round 1");
 
-        anotherHero.attack();
-        aHero.takedamage();
+        paladin.attack();
+        wizard.takedamage();
+
+        System.out.println("paladin " + paladin);
+        System.out.println("wizard " + wizard);
+
+        System.out.println("Round 2");
+
+        wizard.attack();
+        paladin.takedamage();
+
+
+        System.out.println("paladin " + paladin);
+        System.out.println("wizard " + wizard);
+
+        System.out.println("Round 3");
+
+        paladin.attack();
+        wizard.takedamage();
+
+
+        System.out.println("paladin " + paladin);
+        System.out.println("wizard " + wizard);
+
+        System.out.println("Round 4");
+
+        wizard.heal();
+
+
+        System.out.println("paladin " + paladin);
+        System.out.println("wizard " + wizard);
 
     }
 }

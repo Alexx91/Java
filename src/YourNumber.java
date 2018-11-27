@@ -11,21 +11,21 @@ public class YourNumber {
         System.out.print("Cate incercari? : ");
 
         Scanner tries = new Scanner(System.in);
-        int c = tries.nextInt();
+        int y = tries.nextInt();
 
         int i = 0;
         String again;
 
         int randomNumber = (int) (Math.random() * max);
         do {
-            while (i < c) {
+            while (i < y) {
                 Scanner number = new Scanner(System.in);
 
                 System.out.print("Care este numarul magic? : ");
 
                 int x = number.nextInt();
 
-                if (x != randomNumber && i == c - 1) {
+                if (x != randomNumber && i == y - 1) {
                     System.out.println("Ai pierdut :(");
                     break;
                 } else if (x > randomNumber) {

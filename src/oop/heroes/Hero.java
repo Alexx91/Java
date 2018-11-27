@@ -11,17 +11,17 @@ abstract public class Hero {
         this.isAlive = true;
     }
 
-     public void takedamage() {
+     public void takedamage(int damage) {
         if(!isAlive) return;
-        doTakeDamage();
+        doTakeDamage(damage);
      }
-     abstract void doTakeDamage();
+     abstract void doTakeDamage(int damage);
 
-     public void attack() {
+     public void attack(Hero hero) {
         if (!isAlive) return;
-        doAttack();
+        doAttack(hero);
      }
-     abstract void doAttack();
+     abstract void doAttack(Hero hero);
 
     abstract public void heal();
 

@@ -15,8 +15,7 @@ public class Battle {
 
         System.out.println("Round 1");
 
-        paladin.doAttack();
-        wizard.doTakeDamage();
+        paladin.attack(wizard);
 
         System.out.println("paladin " + paladin);
         System.out.println("wizard " + wizard);

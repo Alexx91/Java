@@ -15,13 +15,14 @@ public class Mage extends Hero {
     }
 
     @Override
-    void doTakeDamage() {
-        life--;
+    void doTakeDamage(int damage) {
+        life -= damage;
         energy++;
     }
 
     @Override
-    void doAttack() {
-        energy -= 3;
+    void doAttack(Hero hero) {
+        hero.takedamage(2);
+        energy --;
     }
 }

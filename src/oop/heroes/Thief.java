@@ -7,13 +7,14 @@ public class Thief extends Hero {
     }
 
     @Override
-    void doTakeDamage() {
-        life -= 2;
+    void doTakeDamage(int damage) {
+        life -= damage;
     }
 
     @Override
-    void doAttack() {
-        life += 1;
+    void doAttack(Hero hero) {
+        hero.takedamage(2);
+        life += life;
         energy--;
     }
 

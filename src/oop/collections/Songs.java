@@ -4,30 +4,30 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.*;
 
 public class Songs {
     public static void main(String[] args) {
-        ArrayList<String> songs = new ArrayList<>();
+        TreeSet<Song> songs = new TreeSet<>();
         try {
-            BufferedReader reader = new BufferedReader(new FileReader("src/oop/collections/songs.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader("src/oop/collections/artists.txt"));
 
             String song;
             while ((song = reader.readLine()) != null) {
-                songs.add(song);
+                String title = song.substring(0, song.indexOf('/'));
+                String artist = song.substring(song.indexOf('/') + 1);
+
+                Song songObject = new Song(title, artist);
+                songs.add(songObject);
             }
-            reader.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        Collections.sort(songs);
-
-        for (String song : songs) {
+        for (Song song: songs) {
             System.out.println(song);
         }
     }
 }
+
